@@ -31,6 +31,7 @@ const perguntasQuiz = [
         correta: 1
     },
 
+    // --- CATEGORIA: TECNOLOGIAS DA EMBRAPA (Novas perguntas estratégicas) ---
     {
         categoria: "Tecnologias da Embrapa",
         pergunta: "Qual é o principal objetivo do Sistema Erva 20 desenvolvido pela Embrapa?",
@@ -52,6 +53,7 @@ const perguntasQuiz = [
         correta: 0
     },
 
+    // --- CATEGORIA: CONHECIMENTO GERAL ---
     {
         categoria: "Conhecimento Geral",
         pergunta: "Quem foram os primeiros povos a descobrir e utilizar as folhas da erva-mate para o consumo?",
@@ -157,7 +159,6 @@ const perguntasQuiz = [
 let indicePerguntaAtual = 0;
 let pontuacao = 0;
 let respondido = false; 
-
 function renderizarPergunta() {
     const container = document.getElementById('quizContainer');
     if (!container) return;
@@ -241,7 +242,7 @@ function verificarResposta(indiceSelecionado, botaoClicado) {
         botaoClicado.style.color = '#1b5e20';
         botaoClicado.innerHTML += ' 🎉';
     } else {
-        botaoClicado.style.backgroundColor = '#ffcdd2'; 
+        botaoClicado.style.backgroundColor = '#ffcdd2';
         botaoClicado.style.borderColor = '#d32f2f';
         botaoClicado.style.color = '#c62828';
         botaoClicado.innerHTML += ' ❌';
@@ -290,7 +291,6 @@ function reiniciarQuiz() {
     renderizarPergunta();
 }
 
-// Inicialização segura
 document.addEventListener('DOMContentLoaded', () => {
     const btnIniciar = document.getElementById('btnIniciarQuiz');
     if (btnIniciar) {
